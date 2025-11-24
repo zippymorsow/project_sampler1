@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-sampler1",
+  "name": "project-sampler1",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:portfolio_sampler1": "node dist/portfolio_sampler1/server/server.mjs"
+    "serve:ssr:project_sampler1": "node dist/project_sampler1/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
@@ -23,12 +23,12 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/cdk": "^20.2.12",
+    "@angular/cdk": "^20.2.13",
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
     "@angular/core": "^20.3.0",
     "@angular/forms": "^20.3.0",
-    "@angular/material": "^20.2.12",
+    "@angular/material": "^20.2.13",
     "@angular/platform-browser": "^20.3.0",
     "@angular/platform-server": "^20.3.0",
     "@angular/router": "^20.3.0",

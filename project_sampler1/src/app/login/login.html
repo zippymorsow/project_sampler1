@@ -1,0 +1,19 @@
+<div class="login-wrapper">
+    <form [formGroup]="form" (ngSubmit)="onLogin()">
+        <div class="login">
+            <div class="avatar-wrapper">
+                <img src="../assets/img/userimg.png" alt="avatar">
+            </div>
+            <h1>Login</h1>
+            <mat-form-field>
+                <mat-label>Input</mat-label>
+                <input formControlName="username" matInput>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Enter your password</mat-label>
+                <input formControlName="password" matInput type="password" />
+            </mat-form-field>
+            <button type="submit" matButton="filled">Basic</button>
+        </div>
+    </form>
+</div>

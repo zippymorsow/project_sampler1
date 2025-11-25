@@ -1,0 +1,9 @@
+<mat-toolbar>
+  <span>My Application</span>
+  <span class="example-spacer"></span>
+  <button *ngFor="let menuItem of menuItems" [routerLink] = "menuItem.redirect" matButton="filled">{{menuItem.name}}</button>
+  <span class="example-spacer"></span>
+  <button routerLink = "/dashboard/login" matIconButton class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>

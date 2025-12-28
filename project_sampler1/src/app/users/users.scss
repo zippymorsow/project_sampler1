@@ -1,0 +1,10 @@
+mat-icon[fontIcon] {
+    cursor: pointer;
+}
+mat-icon[fontIcon="delete"] {
+    color: rgb(252, 113, 67);
+}
+
+.mat-mdc-form-field {
+    width: 100%;
+}

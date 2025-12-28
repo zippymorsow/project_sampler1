@@ -1,0 +1,83 @@
+[
+  {
+    "username": "jsuar", "firstname": "John", "lastname": "Suar", "sex": "M"
+  },
+  {
+    "username": "adoe", "firstname": "Alice", "lastname": "Doe", "sex": "F"
+  },
+  {
+    "username": "bsmith", "firstname": "Bob", "lastname": "Smith", "sex": "M"
+  },
+  {
+    "username": "cjones", "firstname": "Cathy", "lastname": "Jones", "sex": "F"
+  },
+  {
+    "username": "dwhite", "firstname": "David", "lastname": "White", "sex": "M"
+  },
+  {
+    "username": "emiller", "firstname": "Eva", "lastname": "Miller", "sex": "F"
+  },
+  {
+    "username": "fgarcia", "firstname": "Frank", "lastname": "Garcia", "sex": "M"
+  },
+  {
+    "username": "hrodriguez", "firstname": "Hannah", "lastname": "Rodriguez", "sex": "F"
+  },
+  {
+    "username": "jwilson", "firstname": "Jack", "lastname": "Wilson", "sex": "M"
+  },
+  {
+    "username": "ksanchez", "firstname": "Karen", "lastname": "Sanchez", "sex": "F"
+  },
+  {
+    "username": "kthomas", "firstname": "Karen", "lastname": "Thomas", "sex": "F"
+  },
+  {
+    "username": "lmoore", "firstname": "Larry", "lastname": "Moore", "sex": "M"
+  },
+  {
+    "username": "nmartinez", "firstname": "Nina", "lastname": "Martinez", "sex": "F"
+  },
+  {
+    "username": "operez", "firstname": "Oscar", "lastname": "Perez", "sex": "M"
+  },
+  {
+    "username": "rlee", "firstname": "Rachel", "lastname": "Lee", "sex": "F"
+  },
+  {
+    "username": "swilson", "firstname": "Sam", "lastname": "Wilson", "sex": "M"
+  },
+  {
+    "username": "tclark", "firstname": "Tina", "lastname": "Clark", "sex": "F"
+  },
+  {
+    "username": "uwright", "firstname": "Ulysses", "lastname": "Wright", "sex": "M"
+  },
+  {
+    "username": "vking", "firstname": "Victoria", "lastname": "King", "sex": "F"
+  },
+  {
+    "username": "zlopez", "firstname": "Zach", "lastname": "Lopez", "sex": "M"
+  },
+  {
+    "username": "ymorris", "firstname": "Yvonne", "lastname": "Morris", "sex": "F"
+  },
+  {
+    "username": "xhernandez", "firstname": "Xavier", "lastname": "Hernandez", "sex": "M"
+  },
+  {
+    "username": "qyoung", "firstname": "Quinn", "lastname": "Young", "sex": "F"
+  },
+  {
+    "username": "pallen", "firstname": "Paul", "lastname": "Allen", "sex": "M"
+  },
+  {
+    "username": "rscott", "firstname": "Rita", "lastname": "Scott", "sex": "F"
+  },
+  {
+    "username": "tadams", "firstname": "Tom", "lastname": "Adams", "sex": "M"
+  },
+  {
+    "username": "bnelson", "firstname": "Betty", "lastname": "Nelson", "sex": "F"
+  }
+]

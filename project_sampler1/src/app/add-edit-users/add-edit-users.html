@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>Add / Edit User</h2>
+<mat-dialog-content>
+    <form>        
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>User Name</mat-label>
+            <input matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Sex</mat-label>
+            <mat-select>
+                <mat-option value="F">Male</mat-option>
+                <mat-option value="M">Female</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <a (click)="closeDialog()" matButton>Close</a>
+    <button matButton="filled">Save</button>
+</mat-dialog-actions>

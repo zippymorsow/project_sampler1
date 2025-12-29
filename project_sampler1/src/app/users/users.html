@@ -1,6 +1,8 @@
 <div class="container">
   <mat-toolbar>
     <span>Users</span>
+    <span class="example-spacer"></span>
+    <button matButton="filled" (click)="openAddEditUser()">Add User</button>
   </mat-toolbar>
 
   <mat-form-field>
@@ -10,8 +12,6 @@
 
   <table mat-table [dataSource]="dataFilter" matSort (matSortChange)="announceSortChange($event)" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
 
     <!-- User Name Column -->
     <ng-container matColumnDef="username">

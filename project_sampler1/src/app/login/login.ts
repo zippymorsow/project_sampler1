@@ -40,7 +40,6 @@ export class Login {
     if (this.form.valid) {
       const username = this.form.get('username')?.value;
       const password = this.form.get('password')?.value;
-      console.log('Logging in with', username, password);
       this.router.navigate(['/dashboard']);
     } else {
       console.log('Form is invalid');

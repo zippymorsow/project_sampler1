@@ -38,6 +38,16 @@ body {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+a,button {
+  cursor: pointer;
+  border-radius: 0 !important;
+}
+a:hover, button:hover {
+  // background: #ffffff !important;
+  // color: #101414 !important;
+  box-shadow: 5px 5px 3px #10141440;
+  z-index: 1;
+}
 .container {
   margin: 5px 100px 0 100px;
 }

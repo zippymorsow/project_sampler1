@@ -40,9 +40,9 @@
     <ng-container matColumnDef="actions" class="actions icon">
       <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Actions"> Actions </th>
       <td mat-cell *matCellDef="let dataSource">
-        <mat-icon aria-hidden="false" matTooltip="Search" aria-label="search icon" fontIcon="search"></mat-icon>
-        <mat-icon aria-hidden="false" matTooltip="Edit" aria-label="edit icon" fontIcon="edit"></mat-icon>
-        <mat-icon aria-hidden="false" matTooltip="Delete" aria-label="delete icon" fontIcon="delete"></mat-icon>
+        <mat-icon aria-hidden="false" matTooltip="Search" aria-label="search icon" (click)="openAddEditUser(dataSource, 'search')" fontIcon="search"></mat-icon>
+        <mat-icon aria-hidden="false" matTooltip="Edit" aria-label="edit icon" (click)="openAddEditUser(dataSource, 'edit')" fontIcon="edit"></mat-icon>
+        <mat-icon aria-hidden="false" matTooltip="Delete" aria-label="delete icon" (click)="openRemoveDialog(dataSource)" fontIcon="delete"></mat-icon>
       </td>
     </ng-container>
 

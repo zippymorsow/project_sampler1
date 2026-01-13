@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>{{ dialogData.titleDialog }}</h2>
+<mat-dialog-content>
+  Would you like to remove {{ dialogData.firstname }} {{ dialogData.lastname }} ({{ dialogData.username }})?
+</mat-dialog-content>
+<mat-dialog-actions>
+  <a (click)="usersService.closeDialog()" matButton>Close</a>
+  <button matButton="filled" (click)="removedUsersApi(dialogData, 'remove')">Yes</button>
+</mat-dialog-actions>

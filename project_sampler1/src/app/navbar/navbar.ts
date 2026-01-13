@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import { MenuService } from '../service/menu';
 import { Menu } from '../interfaces/menu';
 import { OnInit } from '@angular/core';
@@ -10,12 +10,13 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
-  imports: [MatToolbarModule
-    , MatIconModule
-    , MatButtonModule
-    , RouterLink
-    , CommonModule
-  ],
+  imports: [MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    RouterLink,
+    CommonModule,
+    RouterLinkActive,
+    RouterModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })

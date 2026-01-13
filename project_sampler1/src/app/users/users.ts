@@ -14,6 +14,7 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { AddEditUsers } from '../add-edit-users/add-edit-users';
+import { RemoveDialog } from '../remove-dialog/remove-dialog';
 
 
 @Component({
@@ -35,8 +36,17 @@ import { AddEditUsers } from '../add-edit-users/add-edit-users';
 export class Users implements OnInit, AfterViewInit {
 
   //create a constructor
-  constructor(private usersService: UsersService, private _liveAnnouncer: LiveAnnouncer, readonly dialog: MatDialog) { }
-
+  constructor(private usersService: UsersService, private _liveAnnouncer: LiveAnnouncer, readonly dialog: MatDialog) {
+    this.userElemEmpty = {
+      id: '',
+      username: '',
+      firstname: '',
+      lastname: '',
+      sex: ''
+    };
+  }
+  
+  userElemEmpty: UserElement;
   dataSource: UserElement[] = [];
   displayedColumns: string[] = [];
   dataFilter!: MatTableDataSource<UserElement>;
@@ -50,8 +60,7 @@ export class Users implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // this.assignPaginator();
-    // this.dataFilter.sort = this.sort;
+    this.assignDataAfterInit();
   }
 
   setUsers() {
@@ -75,9 +84,10 @@ export class Users implements OnInit, AfterViewInit {
     this.dataFilter.filter = filterValue.trim().toLowerCase();
   }
 
-  assignPaginator() : void{
+  assignDataAfterInit() : void{
     if (this.dataFilter) {
       this.dataFilter.paginator = this.paginator;
+      this.dataFilter.sort = this.sort;
     }
   }
 
@@ -94,9 +104,28 @@ export class Users implements OnInit, AfterViewInit {
     }
   }
 
-  openAddEditUser() : void {
+  openAddEditUser(data?: UserElement, action?: string) : void {
     // Open dialog to add/edit user
-    this.usersService.openDialog(AddEditUsers);
+    if (data) {
+      // change titleDialog based on action
+      if (action === 'search') {
+        // this.usersService.openDialog(AddEditUsers, { titleDialog: "View User" });
+        this.usersService.openDialog(AddEditUsers, { ...data, titleDialog: "View User" });
+        this.usersService.setViewModeAddEditUser(true);
+        return;
+      }
+      // Edit case
+      this.usersService.openDialog(AddEditUsers, { ...data, titleDialog: "Edit User" });
+      this.usersService.setViewModeAddEditUser(false);
+      return;
+    }
+    // Add case
+    this.usersService.openDialog(AddEditUsers, { ...this.userElemEmpty, titleDialog: "Add User" });
+    this.usersService.setViewModeAddEditUser(false);
   }
 
+  openRemoveDialog(data: UserElement) : void {
+    // Open dialog to remove user
+    this.usersService.openDialog( RemoveDialog, {...data, titleDialog: "Remove User"} );
+  }
 }

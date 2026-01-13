@@ -1,0 +1,26 @@
+[
+  {
+    "id": "4Lxv1Gr5Oa",
+    "username": "cjones",
+    "firstname": "Cathy",
+    "lastname": "Jones",
+    "sex": "F",
+    "titleDialog": "Remove User"
+  },
+  {
+    "id": "ChwmiRnhlb",
+    "username": "emiller",
+    "firstname": "Eva",
+    "lastname": "Miller",
+    "sex": "F",
+    "titleDialog": "Remove User"
+  },
+  {
+    "id": "zVurbPzBYQ",
+    "username": "dwhite",
+    "firstname": "David",
+    "lastname": "White",
+    "sex": "M",
+    "titleDialog": "Remove User"
+  }
+]

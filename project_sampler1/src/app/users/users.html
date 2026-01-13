@@ -1,5 +1,55 @@
 <div class="container">
   <mat-toolbar>
     <span>Users</span>
+    <span class="example-spacer"></span>
+    <button matButton="filled" (click)="openAddEditUser()">Add User</button>
   </mat-toolbar>
+
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataFilter" matSort (matSortChange)="announceSortChange($event)" class="mat-elevation-z8">
+
+
+    <!-- User Name Column -->
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by User Name"> User Name </th>
+      <td mat-cell *matCellDef="let dataSource"> {{dataSource.username}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="firstname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by First Name"> First Name </th>
+      <td mat-cell *matCellDef="let dataSource"> {{dataSource.firstname}} </td>
+    </ng-container>
+
+    <!-- Last Name Column -->
+    <ng-container matColumnDef="lastname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Last Name"> Last Name </th>
+      <td mat-cell *matCellDef="let dataSource"> {{dataSource.lastname}} </td>
+    </ng-container>
+
+    <!-- Sex Column -->
+    <ng-container matColumnDef="sex">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Sex"> Sex </th>
+      <td mat-cell *matCellDef="let dataSource"> {{dataSource.sex}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions" class="actions icon">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Actions"> Actions </th>
+      <td mat-cell *matCellDef="let dataSource">
+        <mat-icon aria-hidden="false" matTooltip="Search" aria-label="search icon" (click)="openAddEditUser(dataSource, 'search')" fontIcon="search"></mat-icon>
+        <mat-icon aria-hidden="false" matTooltip="Edit" aria-label="edit icon" (click)="openAddEditUser(dataSource, 'edit')" fontIcon="edit"></mat-icon>
+        <mat-icon aria-hidden="false" matTooltip="Delete" aria-label="delete icon" (click)="openRemoveDialog(dataSource)" fontIcon="delete"></mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 15, 20, 25, 30]" aria-label="Select page">
+  </mat-paginator>
 </div>

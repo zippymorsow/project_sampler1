@@ -1,0 +1,32 @@
+<form [formGroup]="addEditform" (ngSubmit)="onSave()">
+    <h2 mat-dialog-title>{{ dialogData.titleDialog }}</h2>
+    <mat-dialog-content>
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstname" (focus)="generateUsername()">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastname" (focus)="generateUsername()">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>User Name</mat-label>
+            <input matInput formControlName="username" [value]=" addEditform.get('firstname')?.value[0] + addEditform.get('lastname')?.value " (focus)="generateUsername()">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Sex</mat-label>
+            <mat-select formControlName="sex">
+                <mat-option value="M">Male</mat-option>
+                <mat-option value="F">Female</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <a (click)="usersService.closeDialog()" matButton>Close</a>
+        <button type="submit" matButton="filled">Save</button>
+    </mat-dialog-actions>
+</form>

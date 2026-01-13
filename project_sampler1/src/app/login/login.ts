@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -40,7 +40,6 @@ export class Login {
     if (this.form.valid) {
       const username = this.form.get('username')?.value;
       const password = this.form.get('password')?.value;
-      console.log('Logging in with', username, password);
       this.router.navigate(['/dashboard']);
     } else {
       console.log('Form is invalid');

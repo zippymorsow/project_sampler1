@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "serve:ssr:project_sampler1",
+			"path": "project_sampler1",
+			"problemMatcher": [],
+			"label": "npm: serve:ssr:project_sampler1 - project_sampler1",
+			"detail": "node dist/project_sampler1/server/server.mjs"
+		}
+	]
+}

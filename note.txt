@@ -37,13 +37,10 @@ pipeline {
     }
     post {
         success {
-            echo 'Pipeline completed successfully!'
+            echo 'JOJO Pipeline completed successfully!'
         }
         failure {
             echo 'Pipeline failed!'
         }
     }
 }
-
-
-SAMPLE ONLY.....

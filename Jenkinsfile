@@ -1,0 +1,45 @@
+pipeline {
+    agent {
+        label 'docker-agent'
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out code...'
+                checkout scm
+            }
+        }
+        stage('Backend - Install Dependencies') {
+            steps {
+                dir('project_sampler1_backend-server') {
+                    echo 'Installing backend dependencies...'
+                    sh 'npm install'
+                }
+            }
+        }
+        stage('Frontend - Install Dependencies') {
+            steps {
+                dir('project_sampler1') {
+                    echo 'Installing frontend dependencies...'
+                    sh 'npm install'
+                }
+            }
+        }
+        stage('Frontend - Build') {
+            steps {
+                dir('project_sampler1') {
+                    echo 'Building Angular app...'
+                    sh 'npm run build'
+                }
+            }
+        }
+    }
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+}

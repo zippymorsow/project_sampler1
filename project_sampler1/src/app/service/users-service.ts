@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { UserElement } from '../interfaces/menu';
 import { MatDialog } from '@angular/material/dialog';
@@ -27,7 +27,7 @@ export class UsersService {
     return this.http.get<UserElement[]>('./assets/data/users.json').pipe(
       catchError((error) => {
         console.error('Error fetching users data:', error);
-        throw error;
+        return of([]); // Return an empty array in case of error
       })
     );
   }

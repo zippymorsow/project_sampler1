@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Menu, UserElement } from '../interfaces/menu';
 
 @Injectable({
@@ -12,6 +13,11 @@ export class MenuService {
 
   // gets the menu items from the json file (we call this Observable)
   getMenu(): Observable<Menu[]> {
-    return this.http.get<Menu[]>('./assets/data/menu.json');
+    return this.http.get<Menu[]>('./assets/data/menu.json').pipe(
+      catchError((error) => {
+        console.error('Error fetching menu data:', error);
+        throw error;
+      })
+    );
   }
 }

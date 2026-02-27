@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { mergeMap } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { UserElement } from '../interfaces/menu';
 import { MatDialog } from '@angular/material/dialog';
 import { SERVER_CONFIG, ENDPOINTS_DETAILS } from '../../constants';
@@ -24,7 +24,12 @@ export class UsersService {
   
   //Fetch Data Methods
   getUsers(): Observable<UserElement[]> {
-    return this.http.get<UserElement[]>('./assets/data/users.json');
+    return this.http.get<UserElement[]>('./assets/data/users.json').pipe(
+      catchError((error) => {
+        console.error('Error fetching users data:', error);
+        throw error;
+      })
+    );
   }
 
   getUsersApi(): Observable<any[]> {

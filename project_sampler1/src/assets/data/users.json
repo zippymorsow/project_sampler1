@@ -22,9 +22,9 @@
   },
   {
     "id": "T7HVmeGyeC",
-    "username": "ksanchez",
     "firstname": "Karen",
-    "lastname": "Sanchez",
+    "lastname": "Mendiola",
+    "username": "ksanchez",
     "sex": "F"
   },
   {
@@ -285,5 +285,12 @@
     "lastname": "Bernal",
     "username": "jbernal",
     "sex": "M"
+  },
+  {
+    "id": "fs07nadz9LGCafD2Apkym",
+    "firstname": "Miles",
+    "lastname": "Lannister",
+    "username": "mlannister",
+    "sex": "F"
   }
 ]

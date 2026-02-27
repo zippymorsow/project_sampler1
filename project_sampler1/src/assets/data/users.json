@@ -15,9 +15,9 @@
   },
   {
     "id": "zmT7ez_o14",
-    "username": "jwilson",
-    "firstname": "Jack",
+    "firstname": "Jack Grann",
     "lastname": "Wilson",
+    "username": "jwilson",
     "sex": "M"
   },
   {
@@ -277,6 +277,13 @@
     "firstname": "Eva",
     "lastname": "Miller",
     "username": "emiller",
+    "sex": "F"
+  },
+  {
+    "id": "tmGDv3uVILmcfWujp6idc",
+    "firstname": "Liza",
+    "lastname": "Quezada",
+    "username": "lquezada",
     "sex": "F"
   }
 ]

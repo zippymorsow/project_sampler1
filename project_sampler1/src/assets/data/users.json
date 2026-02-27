@@ -113,9 +113,9 @@
   },
   {
     "id": "bLnEQVuEtG",
-    "username": "qyoung",
     "firstname": "Quinn",
-    "lastname": "Young",
+    "lastname": "Youngqi",
+    "username": "qyoung",
     "sex": "F"
   },
   {
@@ -151,13 +151,6 @@
     "firstname": "MOMO",
     "lastname": "Land",
     "username": "mland",
-    "sex": "M"
-  },
-  {
-    "id": "y5Cjj6yi0nid5B85AaTVB",
-    "firstname": "Yeshua",
-    "lastname": "M'Lankique",
-    "username": "ym'lankique",
     "sex": "M"
   },
   {
@@ -285,5 +278,12 @@
     "lastname": "Quezada",
     "username": "lquezada",
     "sex": "F"
+  },
+  {
+    "id": "7UEtADvUayj_GSR1DQh_y",
+    "firstname": "Joseph",
+    "lastname": "Bernal",
+    "username": "jbernal",
+    "sex": "M"
   }
 ]

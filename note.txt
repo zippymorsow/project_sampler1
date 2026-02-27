@@ -1,5 +1,8 @@
+//first jenkinsfile for project_sampler1
 pipeline {
-    agent any
+    agent {
+        label 'docker-agent'
+    }
     stages {
         stage('Checkout') {
             steps {
